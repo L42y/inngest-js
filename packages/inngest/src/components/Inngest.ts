@@ -250,7 +250,7 @@ export class Inngest<TOpts extends ClientOptions = ClientOptions> {
           errorMessage = "Event key not found";
           break;
         case 406:
-          errorMessage = `${JSON.stringify(await response.json())}`;
+          errorMessage = JSON.stringify(await response.json());
           break;
         case 409:
         case 412:
